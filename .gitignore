@@ -1,0 +1,10 @@
+/drush/contrib/
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# Site specific
+/web/sites/*
