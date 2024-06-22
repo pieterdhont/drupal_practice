@@ -16,10 +16,14 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "drupal/admin_toolbar": "^3.4",
+        "drupal/asset_injector": "2.20",
         "drupal/core": "^10.3",
         "drupal/core-composer-scaffold": "^10.3",
         "drupal/core-project-message": "^10.3",
-        "drupal/core-recommended": "^10.3"
+        "drupal/core-recommended": "^10.3",
+        "drupal/devel": "5.2",
+        "drush/drush": "^12.5"
     },
     "conflict": {
         "drupal/drupal": "*"
