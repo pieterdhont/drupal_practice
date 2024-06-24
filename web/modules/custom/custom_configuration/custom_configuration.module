@@ -1,6 +1,17 @@
 <?php
 
 /**
- * @file
- * Primary module hooks for custom_configuration module.
+  * Set a template for my social links block. 
  */
+
+function custom_configuration_theme() {
+  return [
+    'social_links' => [
+      'variables' => [
+        'facebook' => NULL,
+        'twitter' => NULL,
+      ],
+      'template' => 'social-links',
+    ],
+  ];
+}
