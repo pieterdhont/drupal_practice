@@ -1,0 +1,5 @@
+name: 'custom_configuration'
+type: module
+description: 'blablabla'
+package: Pieter
+core_version_requirement: ^10 || ^11

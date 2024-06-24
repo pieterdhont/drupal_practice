@@ -1,0 +1,5 @@
+custom_configuration.settings:
+  title: Settings
+  parent: system.admin_config_system
+  route_name: custom_configuration.settings
+  weight: 10
