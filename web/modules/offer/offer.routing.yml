@@ -1,0 +1,7 @@
+offer.debug:
+  path: '/debug'
+  defaults:
+    _title: 'Debug'
+    _controller: '\Drupal\offer\Controller\OfferController::__invoke'
+  requirements:
+    _permission: 'access content'
