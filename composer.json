@@ -22,6 +22,7 @@
         "drupal/core-composer-scaffold": "^10.3",
         "drupal/core-project-message": "^10.3",
         "drupal/core-recommended": "^10.3",
+        "drupal/upgrade_status": "^4.3",
         "drush/drush": "^12.5"
     },
     "conflict": {
@@ -38,7 +39,10 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+          "php": "8.3.0"
+  }
     },
     "extra": {
         "drupal-scaffold": {
@@ -101,6 +105,7 @@
         }
     },
     "require-dev": {
+        "drupal/core-dev": "10.3.0",
         "drupal/devel": "^5.2",
         "drupal/webprofiler": "^10.1"
     }
