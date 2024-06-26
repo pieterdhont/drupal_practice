@@ -29,3 +29,8 @@ entity.offer.canonical:
     _title: 'Offer'
   requirements:
     _entity_access: 'offer.view'
+
+entity.offer.collection:
+  path: '/offers'
+  requirements:
+   _permission: 'administer own offers'

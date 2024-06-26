@@ -2,3 +2,5 @@ name: 'offer'
 type: module
 description: 'Provides an offer entity.'
 core_version_requirement: ^10 || ^11
+dependencies:
+- drupal:views
