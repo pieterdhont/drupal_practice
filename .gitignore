@@ -8,3 +8,4 @@
 
 # Site specific
 /web/sites/*
+/.vscode/*
