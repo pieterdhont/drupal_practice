@@ -54,7 +54,8 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
  *     "delete-form" = "/offers/{offer}/delete",
  *     "edit-form" = "/offers/{offer}/edit",
  *     "create-form" = "/offer/create",
- *   }
+ *     },
+ *   field_ui_base_route = "entity.offer.settings"
  * )
  */
 
@@ -120,23 +121,7 @@ class Offer extends EditorialContentEntityBase
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['message'] = BaseFieldDefinition::create('string_long')
-      ->setLabel($translator->translate('Message'))
-      ->setRequired(TRUE)
-      ->setDisplayOptions('form', [
-        'type' => 'string_textarea',
-        'weight' => 4,
-        'settings' => [
-          'rows' => 12,
-        ],
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayOptions('view', [
-        'type' => 'string',
-        'weight' => 0,
-        'label' => 'above',
-      ])
-      ->setDisplayConfigurable('view', TRUE);
+
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel($translator->translate('Publishing status'))
