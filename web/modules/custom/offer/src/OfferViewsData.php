@@ -21,6 +21,7 @@ $data['offer']['offer_entity_moderation_state_views_field'] = [
   'id' => 'offer_entity_moderation_state_views_field',
 ]
 ];
+ 
 
 return $data;
 }
