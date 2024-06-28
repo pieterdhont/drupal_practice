@@ -22,6 +22,14 @@ $data['offer']['offer_entity_moderation_state_views_field'] = [
 ]
 ];
  
+$data['offer']['offer_dynamic_option_links'] = [
+  'title' => t('Dynamic opertions'),
+  'field' => [
+    'title' => t('Dynamic opertions'),
+    'help' => t('Shows a dropbutton wiht dynamic operations for offers'),
+    'id' => 'offer_dynamic_option_links',
+  ]
+];
 
 return $data;
 }
