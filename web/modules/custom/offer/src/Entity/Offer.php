@@ -163,4 +163,27 @@ class Offer extends EditorialContentEntityBase
   {
     return $this->get('user_id')->target_id;
   }
+
+  /**
+   * Returns a promotext (fixed, for now!)
+   * @return string
+   */
+  public function getPromotext()
+  {
+    return 'be the first!';
+  }
+  /**
+   * Return a price string based on field_price
+   * @return string
+   */
+  public function getPriceAmount()
+  {
+    switch ($this->get('field_offer_type')->getString()) {
+      case 'with_minimum':
+        return $this->get('field_price')->getString() . '$';
+      case 'no_minimum':
+        return 'Start bidding at 0$';
+    }
+    return '';
+  }
 }

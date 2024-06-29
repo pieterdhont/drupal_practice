@@ -1,0 +1,47 @@
+<?php
+
+use Drupal\Core\Render\Element;
+
+/**
+ * Provides a theme definition for custom content entity offer
+ * {@inheritdoc}
+ */
+function offer_theme($existing, $type, $theme, $path)
+{
+  return [
+    'offer' => [
+      'render element' => 'elements',
+    ],
+    'offer__full' => [
+      'base hook' => 'offer',
+    ],
+    'offer__teaser' => [
+      'base hook' => 'offer'
+    ],
+  ];
+}
+/**
+ * Prepares variables for templates.
+ * implements hook_preprocess_HOOK()
+ */
+function template_preprocess_offer(array &$variables)
+{
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+  $offer = $variables['elements']['#offer'];
+  // The full offer object
+  $variables['offer'] = $offer;
+}
+/**
+ * Adds template possibility for view modes
+ * Implements hook_provider_theme_suggestions_hook_alter
+ */
+function offer_theme_suggestions_offer_alter(array &$suggestions, array $vars, $hook)
+{
+  if ($offer = $vars['elements']['#offer']) {
+    if (isset($vars['elements']['#view_mode'])) {
+      $suggestions[] = 'offer__' . $vars['elements']['#view_mode'];
+    }
+  }
+}
