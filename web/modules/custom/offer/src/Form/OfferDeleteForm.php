@@ -40,8 +40,7 @@ public function getQuestion() {
   *
   * Delete the entity
   */
-  public function submitForm(array &$form, FormStateInterface
-  $form_state) {
+  public function submitForm(array &$form, FormStateInterface $form_state) {
   $entity = $this->getEntity();
   $entity->delete();
   $this->logger('offer')->notice('deleted %title.',
