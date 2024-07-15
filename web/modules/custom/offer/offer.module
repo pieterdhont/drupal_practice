@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Render\Element;
+use Drupal\views\ViewExecutable;
 
 /**
  * Provides a theme definition for custom content entity offer
@@ -43,5 +44,12 @@ function offer_theme_suggestions_offer_alter(array &$suggestions, array $vars, $
     if (isset($vars['elements']['#view_mode'])) {
       $suggestions[] = 'offer__' . $vars['elements']['#view_mode'];
     }
+  }
+}
+
+function offer_views_pre_render(ViewExecutable $view)
+{
+  if (isset($view) && ($view->storage->id() == 'offer_overview')) {
+    $view->element['#attached']['library'][] = 'offer/offer_overview_page';
   }
 }
